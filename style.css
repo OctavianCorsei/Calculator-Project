@@ -1,0 +1,142 @@
+html {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    font-family: system-ui, -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.game-div {
+    display: flex;
+    justify-content: center;
+}
+
+.outer-calculator {
+    background-color: lightblue;
+    width: 300px;
+    aspect-ratio: 1/1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.result-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.top-result{
+    width: 95%;
+    background-color: lightcoral;
+    height: 4em;
+}
+
+.bottom-result{
+    width: 95%;
+    background-color: lightsalmon;
+    height: 2.5em;
+}
+
+.calc-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.button-wrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    background-color: lightpink;
+    gap: 2px;
+}
+
+.action-button {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: honeydew;
+    font-size: large;
+    font-weight: 200;
+}
+
+.bottom-row {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+}
+
+
+.side-buttons {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightpink;
+    gap: 2px;
+}
+
+.side-action-button {
+    width: 95%;
+    aspect-ratio: 1/1;
+    background-color: honeydew;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 200;
+}
+.calc-digits {
+     width: 75%; 
+     background-color: lightgray;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     gap: 2px;
+}
+
+.digit-button {
+    width: 32.71%;
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 200;
+}
+
+.zero {
+    flex: 2;
+}
+
+.top {
+    flex: 3;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+/*
+.bottom-row {
+    display: flex;
+    width: 95%;
+}
+
+.calc-digits {
+ /* width: 75%; 
+}
+
+.side-buttons {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}*/
