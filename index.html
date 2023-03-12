@@ -13,16 +13,16 @@
     <div class="game-div">
         <div class="outer-calculator">
             <div class="result-area">
-                <div class="top-result"></div>
-                <div class="bottom-result"></div>
+                <div class="top-result" id="topResult"></div>
+                <div class="bottom-result" id="opHistory"></div>
             </div>
             <div class="calc-buttons">
-                <div class="bottom-row">
+                <div class="bottom-row" id="calcButtons">
                     <div class="calc-digits">
                         <div class="button-wrapper">
-                            <div class="action-button">AC</div>
+                            <div class="action-button" id="clearButton">AC</div>
                             <div class="action-button">√</div>
-                            <div class="action-button">%</div>
+                            <div class="action-button" id="backSpace">del</div>
                         </div>
                         <div class="digit-button">1</div>
                         <div class="digit-button">2</div>
@@ -37,11 +37,11 @@
                         <div class="digit-button">.</div>
                     </div>
                     <div class="side-buttons">
-                        <div class="side-action-button">%</div>
-                        <div class="side-action-button">X</div>
-                        <div class="side-action-button">-</div>
-                        <div class="side-action-button">+</div>
-                        <div class="side-action-button">=</div>
+                        <div class="side-action-button operator">/</div>
+                        <div class="side-action-button operator">x</div>
+                        <div class="side-action-button operator">-</div>
+                        <div class="side-action-button operator">+</div>
+                        <div class="side-action-button operator">=</div>
 
                     </div>
                 </div>
