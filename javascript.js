@@ -19,6 +19,15 @@ calculatorButtons.addEventListener('click', buttonPressed);
 del.addEventListener('click', backspaceAction);
 
 function buttonPressed(e){
+    if (resultText.textContent == 'ERROR!'){
+        resultText.textContent = '';
+        opHistory.textContent = '';
+        firstNumber = undefined;
+        secondNumber = undefined;
+        operator = '';
+
+    }
+
     if(e.target.classList.contains('digit-button')){
         if(showingResult){
             resultText.textContent = '';
@@ -35,7 +44,12 @@ function buttonPressed(e){
             firstNumber = Number(resultText.textContent);
             resultText.textContent = '';
             operator = e.target.textContent;
-        }else if(secondNumber == undefined && e.target.textContent != '='){
+        }else if(secondNumber == undefined && showingResult){
+            operator = e.target.textContent;
+            resultText.textContent = '';
+            showingResult = false;
+        }
+        else if(secondNumber == undefined && e.target.textContent != '='){
             console.log('got here');
             secondNumber = Number(resultText.textContent);
             let calcResult = calcOperation(operator, firstNumber, secondNumber);
@@ -50,6 +64,10 @@ function buttonPressed(e){
             firstNumber = calcResult;
             secondNumber = undefined;
         }
+    }else if (e.target.classList.contains('squared')){
+        firstNumber = Math.sqrt(Number(resultText.textContent));
+        resultText.textContent = firstNumber;
+        showingResult = true;
     }
 }
 
@@ -79,7 +97,7 @@ function calcOperation(operator, firstNumber, secondNumber){
             return firstNumber * secondNumber;
         case '/':
             if(secondNumber) return firstNumber / secondNumber;
-            return 0;
+            return 'ERROR!';
         case '=':
             return firstNumber;
         default:
